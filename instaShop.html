@@ -11,7 +11,7 @@
 {% capture instaShop_img_9 %}9-instaShop-sleeves.jpg{% endcapture %}
 
 <!-- Hidden Forms! -->
-<!-- These forms get clones into the carrousel -->
+<!-- These forms get cloned into the carrousel -->
 <!-- Needs refactoring, one loop to create all hidden forms -->
 
 <div id="instaShop_form_1" class="hidden">
@@ -77,9 +77,6 @@
     </div>
 </div>
 
-
-<!-- Instagram Grid -->
-<!-- Needs refactoring, one loop to create all hidden forms -->
 <br>
 <br>
 <br>
@@ -88,6 +85,10 @@
 
 <!-- div to break .wrapper class so grid can go full-width -->
 <!-- </div> -->
+
+
+<!-- Instagram Grid -->
+<!-- Needs refactoring, one loop to create all hidden forms -->
 <br>
 <br>
 <div class="grid blog-grid" align="center">
@@ -396,6 +397,8 @@
         afterClose : function() {
           // Needed to wait to add the css to body.
           setTimeout(function(){
+            // This should be off for mobile... need to dynamically get the height
+            // of the promotional banner that needs this space.
             $('body').css('padding-top', '44px')
           })
         }
