@@ -1,5 +1,5 @@
 # instaShop
-Shop from Instagram pictures grind for Shopify.
+Shop from Instagram pictures grid for Shopify.
 
 ## Links
 You can see this widget in action [here](https://masonbottle.com)
