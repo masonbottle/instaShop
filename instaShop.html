@@ -1,5 +1,3 @@
-<!-- Image Variables -->
-<!-- This section need to to be included in one line on a loop -->
 {% capture instaShop_img_1 %}1-instaShop-silicone-nipples.jpg{% endcapture %}
 {% capture instaShop_img_2 %}2-instaShop-sleeves.jpg{% endcapture %}
 {% capture instaShop_img_3 %}3-instaShop-giftset.jpg{% endcapture %}
@@ -7,162 +5,196 @@
 {% capture instaShop_img_5 %}5-instaShop-original-baby-bottle.jpg{% endcapture %}
 {% capture instaShop_img_6 %}6-instaShop-giftset.jpg{% endcapture %}
 {% capture instaShop_img_7 %}7-instaShop-infant-nipple.jpg{% endcapture %}
-{% capture instaShop_img_8 %}8-instaShop-diy.png{% endcapture %}
+{% capture instaShop_img_8 %}8-instaShop-diy.jpg{% endcapture %}
 {% capture instaShop_img_9 %}9-instaShop-sleeves.jpg{% endcapture %}
 
-<!-- Hidden Forms! -->
-<!-- These forms get cloned into the carrousel -->
-<!-- Needs refactoring, one loop to create all hidden forms -->
-
-<div id="instaShop_form_1" class="hidden">
-    <div id='product-component-7d' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>@faustisland just bought a pack of Mason Bottle Silicone Nipples, and then combined one with a classic blue mason jar she had at home. Extra adorable!</p>
-    </div>
-</div>
-
-<div id="instaShop_form_2" class="hidden">
-    <div id='product-component-cc' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>@valeryphalon.photography uses Mason Bottle Silicone Sleeves to make toddler training cups for her big girls.</p>
-    </div>
-</div>
-
-<div id="instaShop_form_3" class="hidden">
-    <div id='product-component-2a' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>@headygrimm gets a Mason Bottle + Silicone Sleeve ready for her little one. She got the whole bottle including the jar as part of the Essential Mason Bottle Gift Set, but you can also make your own with jars from home using the Mason Bottle DIY Kit.</p>
-    </div>
-</div>
-
-<div id="instaShop_form_4" class="hidden">
-    <div id='product-component-2a' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>@loveandcovenant uses the 8 oz DIY Kit in combination with their mason jars from home.</p>
-    </div>
-</div>
-
-<div id="instaShop_form_5" class="hidden">
-    <div id='product-component-0d' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>@eyecreate_ gave her little lade The Original Mason Bottle. The width of mason jars makes them easy to hold for little hands.</p>
-    </div>
-</div>
-
-<div id="instaShop_form_6" class="hidden">
-    <div id='product-component-a2' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>@headygrimm got the Essential Mason Bottle Gift Set for her little one. It comes with both size bottles, both sleeves, and set of extra set of Medium Flow Nipples.</p>
-    </div>
-</div>
-
-<div id="instaShop_form_7" class="hidden">
-    <div id='product-component-b8' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>Paola used Mason Bottle with her son Max from the day they brought him home from the NICU. Though he didn't take to the preemie nipples in the hospital, he latched onto his Mason Bottle immediately! Though it wasn't necessary for Max, Mason Bottle also sells Extra Flexible Silicone Nipples that mold to baby's mouth just like the breast for those who have latch issues or are just downright picky.</p>
-    </div>
-</div>
-
-<div id="instaShop_form_8" class="hidden">
-    <div id='product-component-2a' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>@sriesland stocked up on mason jars for pumping at work, then she got a Mason Bottle DIY Kit to turn those jars into baby bottles.</p>
-    </div>
-</div>
-
-<div id="instaShop_form_9" class="hidden">
-    <div id='product-component-cc' style="margin: 0 auto;"></div>
-    <div class="product-desc">
-      <p>@MasonBottle we like to use our 4 oz. sleeves with baby food portions.</p>
-    </div>
-</div>
-
+<!-- Instagram Grid -->
 <br>
 <br>
 <br>
-<h1 align="center"> Follow Us </h1>
+<h1 align="center"> Shop Our Instagram </h1>
 <img src="https://cdn.shopify.com/s/files/1/1000/3488/files/line.png?15932132765427351784" width=100% height="20"/>
 
 <!-- div to break .wrapper class so grid can go full-width -->
 <!-- </div> -->
 
-
-<!-- Instagram Grid -->
-<!-- Needs refactoring, one loop to create all hidden forms -->
 <br>
 <br>
 <div class="grid blog-grid" align="center">
+
+    <!-- Here we need a loop :P  -->
+
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_1" data-qw-product="nipples" href="{{instaShop_img_1 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_1 | asset_url }}');"/>
-        </a>
+        <a href="{{instaShop_img_1 | asset_url }}" class="" data-qv-product="nipples" data-fancybox="product-card" data-qv-id="qv-1">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_1 | asset_url }}');"></figure>
+    		</a>
       </div>
+
+      <form id="qv-1-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-7d0544eab6d' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>@faustisland just bought a pack of Mason Bottle Silicone Nipples, and then combined one with a classic blue mason jar she had at home. Extra adorable!</p>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_2" data-qw-product="sleeves" href="{{instaShop_img_2 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_2 | asset_url }}');"/>
+        <a href="{{instaShop_img_2 | asset_url }}" data-qv-product="sleeves" class="" data-fancybox="product-card" data-qv-id="qv-2">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_2 | asset_url }}');"></figure>
         </a>
       </div>
+
+      <form id="qv-2-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-cc79cfd62db' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>@valeryphalon.photography uses Mason Bottle Silicone Sleeves to make toddler training cups for her big girls.</p>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_3" data-qw-product="diy" href="{{instaShop_img_3 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_3 | asset_url }}');"/>
+        <a href="{{instaShop_img_3 | asset_url }}" data-qv-product="diy" class="" data-fancybox="product-card" data-qv-id="qv-3">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_3 | asset_url }}');"></figure>
         </a>
       </div>
+
+      <form id="qv-3-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-2a28c446ccf' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>@headygrimm gets a Mason Bottle + Silicone Sleeve ready for her little one. She got the whole bottle including the jar as part of the Essential Mason Bottle Gift Set, but you can also make your own with jars from home using the Mason Bottle DIY Kit.</p>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_4" data-qw-product="diy" href="{{instaShop_img_4 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_4 | asset_url }}');"/>
+        <a href="{{instaShop_img_4 | asset_url }}" data-qv-product="diy" class="" data-fancybox="product-card" data-qv-id="qv-4">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_4 | asset_url }}');"></figure>
         </a>
       </div>
+
+      <form id="qv-4-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-2a28c446ccf' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>@loveandcovenant uses the 8 oz DIY Kit in combination with their mason jars from home.</p>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_5" data-qw-product="bottles" href="{{instaShop_img_5 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_5 | asset_url }}');"/>
+        <a href="{{instaShop_img_5 | asset_url }}" data-qv-product="bottles" class="" data-fancybox="product-card" data-qv-id="qv-5">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_5 | asset_url }}');"></figure>
         </a>
       </div>
+
+      <form id="qv-5-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-0d78551ee26' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>@eyecreate_ gave her little lade The Original Mason Bottle. The width of mason jars makes them easy to hold for little hands.</p>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_6" data-qw-product="giftset" href="{{instaShop_img_6 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_6 | asset_url }}');"/>
+        <a href="{{instaShop_img_6 | asset_url }}" data-qv-product="giftset" class="" data-fancybox="product-card" data-qv-id="qv-6">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_6 | asset_url }}');"></figure>
         </a>
       </div>
+
+      <form id="qv-6-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-a214ab1f17a' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>@headygrimm got the Essential Mason Bottle Gift Set for her little one. It comes with both size bottles, both sleeves, and set of extra set of Medium Flow Nipples.</p>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_7" data-qw-product="softNips" href="{{instaShop_img_7 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_7 | asset_url }}');"/>
+        <a href="{{instaShop_img_7 | asset_url }}" data-qv-product="softNips" class="" data-fancybox="product-card" data-qv-id="qv-7">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_7 | asset_url }}');"></figure>
         </a>
       </div>
+
+      <form id="qv-7-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-b8d3858a0b5' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>Paola used Mason Bottle with her son Max from the day they brought him home from the NICU. Though he didn't take to the preemie nipples in the hospital, he latched onto his Mason Bottle immediately!</p>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_8" data-qw-product="diy" href="{{instaShop_img_8 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_8 | asset_url }}');"/>
+        <a href="{{instaShop_img_8 | asset_url }}" data-qv-product="diy" class="" data-fancybox="product-card" data-qv-id="qv-8">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_8 | asset_url }}');"></figure>
         </a>
       </div>
+
+      <form id="qv-8-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-2a28c446ccf' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>@sriesland stocked up on mason jars for pumping at work, then she got a Mason Bottle DIY Kit to turn those jars into baby bottles.</p>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a class="quick_view" data-qw-form="instaShop_form_9" data-qw-product="sleeves" href="{{instaShop_img_9 | asset_url }}" data-fancybox='quick-view'>
-          <img class="fig-tile" style="background-image: url('{{instaShop_img_9 | asset_url }}');"/>
+        <a href="{{instaShop_img_9 | asset_url }}" data-qv-product="sleeves" class="" data-fancybox="product-card" data-qv-id="qv-9">
+          <figure class="fig-tile" style="background-image: url('{{instaShop_img_9 | asset_url }}');"></figure>
         </a>
       </div>
+
+      <form id="qv-9-form" class="product-form" action="">
+        <div class="grid">
+          <div class="buy-button" id='product-component-cc79cfd62db' style="margin: 0 auto;">
+            <div class="fancybox-loading"></div>
+          </div>
+          <div class="product-desc">
+            <p>@MasonBottle we like to use our 4 oz. sleeves with baby food portions.</p>
+          </div>
+        </div>
+      </form>
     </div>
+
 </div>
 <br>
 
@@ -170,548 +202,399 @@
 <!-- <div class="wrapper"> -->
 
 
-<script>
-  // ============================================================================
-  //                           InstaShop Widget
-  // ----------------------------------------------------------------------------
+<script type="text/javascript">
+// ============================================================================
+//                           InstaShop Widget
+// ----------------------------------------------------------------------------
+function instaShop() {
 
-  function instaShop() {
+  // Helpers
+  function twoColumnsInstaShop(){
+    $('.buy-button').addClass("grid__item large--one-half medium--one-half small--one-half");
+    $('.product-desc').addClass("grid__item large--one-half medium--one-half small--one-half");
+  }
 
-    // Shopify Buy Button Style JSON Blob
-    var buyButtonOptions = {
-      "product": {
-        "variantId": "all",
-        "width": "240px",
-        "contents": {
-          "imgWithCarousel": false,
-          "variantTitle": false,
-          "description": false,
-          "buttonWithQuantity": false,
-          "quantity": false
+  $( window ).resize(function() {
+    if($(window).innerWidth() <= 590) {
+      twoColumnsInstaShop()
+    }else{
+      $('.buy-button').removeClass("grid__item large--one-half medium--one-half small--one-half");
+      $('.product-desc').removeClass("grid__item large--one-half medium--one-half small--one-half");
+    }
+  });
+
+  // Advanced example - Product quick view
+  var buyButtonOptions = {
+    "product": {
+      "variantId": "all",
+      "width": "240px",
+      "contents": {
+        "imgWithCarousel": false,
+        "variantTitle": false,
+        "description": false,
+        "buttonWithQuantity": false,
+        "quantity": false
+      },
+      "events": {
+        "afterRender": function (component) {$('.product-desc').show();},
+      },
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "100%",
+            "margin-left": "0",
+            "margin-bottom": "50px"
+          }
         },
-        "styles": {
-          "product": {
-            "@media (min-width: 601px)": {
-              "max-width": "100%",
-              "margin-left": "0",
-              "margin-bottom": "50px"
-            }
+        "button": {
+          "background-color": "#5cb8b2",
+          ":hover": {
+            "background-color": "#53a6a0"
           },
-          "button": {
-            "background-color": "#5cb8b2",
-            ":hover": {
-              "background-color": "#53a6a0"
-            },
-            ":focus": {
-              "background-color": "#53a6a0"
-            }
-          },
-          "compareAt": {
-            "font-size": "12px"
+          ":focus": {
+            "background-color": "#53a6a0"
           }
-        }
-      },
-      "cart": {
-        "contents": {
-          "button": true
         },
-        "styles": {
-          "button": {
-            "background-color": "#5cb8b2",
-            ":hover": {
-              "background-color": "#53a6a0"
-            },
-            ":focus": {
-              "background-color": "#53a6a0"
-            }
-          },
-          "footer": {
-            "background-color": "#ffffff"
-          }
+        "compareAt": {
+          "font-size": "12px"
         }
+      }
+    },
+    "cart": {
+      "contents": {
+        "button": true
       },
-      "modalProduct": {
-        "contents": {
-          "img": false,
-          "imgWithCarousel": true,
-          "variantTitle": false,
-          "buttonWithQuantity": false,
-          "button": false,
-          "quantity": false
+      "styles": {
+        "button": {
+          "background-color": "#5cb8b2",
+          ":hover": {
+            "background-color": "#53a6a0"
+          },
+          ":focus": {
+            "background-color": "#53a6a0"
+          }
         },
-        "styles": {
-          "product": {
-            "@media (min-width: 601px)": {
-              "max-width": "100%",
-              "margin-left": "0px",
-              "margin-bottom": "0px"
-            }
+        "footer": {
+          "background-color": "#ffffff"
+        }
+      }
+    },
+    "modalProduct": {
+      "contents": {
+        "img": false,
+        "imgWithCarousel": true,
+        "variantTitle": false,
+        "buttonWithQuantity": false,
+        "button": false,
+        "quantity": false
+      },
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "100%",
+            "margin-left": "0px",
+            "margin-bottom": "0px"
+          }
+        },
+        "button": {
+          "background-color": "#5cb8b2",
+          ":hover": {
+            "background-color": "#53a6a0"
           },
-          "button": {
-            "background-color": "#5cb8b2",
-            ":hover": {
-              "background-color": "#53a6a0"
-            },
-            ":focus": {
-              "background-color": "#53a6a0"
-            }
-          }
-        }
-      },
-      "toggle": {
-        "styles": {
-          "toggle": {
-            "background-color": "#5cb8b2",
-            ":hover": {
-              "background-color": "#53a6a0"
-            },
-            ":focus": {
-              "background-color": "#53a6a0"
-            }
-          }
-        }
-      },
-      "productSet": {
-        "styles": {
-          "products": {
-            "@media (min-width: 601px)": {
-              "margin-left": "-20px"
-            }
+          ":focus": {
+            "background-color": "#53a6a0"
           }
         }
       }
-    };
-
-    // Shopify Buy Buttons Config Set
-    var configSet = {
-      'nipples': {  divId        : 'product-component-ab6d',
-                    componentId  : 4488,
-                    options      : buyButtonOptions
-      },
-      'diy'    : {  divId        : 'product-component-6ccf',
-                    componentId  : 4488,
-                    options      : buyButtonOptions
-      },
-      'sleeves': {  divId        : 'product-component-62db',
-                    componentId  : 4554,
-                    options      : buyButtonOptions
-      },
-      'bottles': {  divId        : 'product-component-ee26',
-                    componentId  : 1854,
-                    options      : buyButtonOptions
-      },
-      'giftset': {  divId        : 'product-component-f17a',
-                    componentId  : 9362,
-                    options      : buyButtonOptions
-      },
-      'caps'  : {   divId        : 'product-component-2626',
-                    componentId  : 6309,
-                    options      : buyButtonOptions
-      },
-      'softNips': { divId        : 'product-component-a0b5',
-                    componentId  : 6246,
-                    options      : buyButtonOptions
-      }
-    };
-
-    // Shopify Buy Button - request and append
-    function ShopifyBuyInit(config) {
-      var client = ShopifyBuy.buildClient({
-        domain: 'mason-bottle.myshopify.com',
-        apiKey: 'a48d',
-        appId: 'xx',
-      });
-
-      ShopifyBuy.UI.onReady(client).then(function (ui) {
-        var $node = document.getElementById(config.divId);
-        $($node).empty();
-        ui.createComponent('product', {
-          id: [config.componentId],
-          node: $node,
-          moneyFormat: '%24%7B%7Bamount%7D%7D',
-          options: config.options
-        });
-      });
-    };
-
-    // Fancybox product description - hidden form cloning and appending
-    function addForm(instance) {
-      var $element = instance.group[ instance.currIndex ].opts.$orig;
-      var form_id = $element.data('qw-form');
-      var product_id = $element.data('qw-product');
-
-      instance.$refs.container.find(targetClass).empty();
-      instance.$refs.container.find(targetClass).append(
-                 // In this example, this element contains the form
-                 $( '#' + form_id ).clone( true ).removeClass('hidden')
-             );
-      ShopifyBuyInit(configSet[product_id]);
-    };
-
-    // Fancybox template config and open callbacks
-    var templateBig = '<div class="fancybox-container" role="dialog">' +
-                      '<div class="quick-view-content">' +
-                        '<div class="quick-view-carousel">' +
-                          '<button data-fancybox-previous class="fancybox-button left_btn fancybox-button--left" title="Previous"></button>' +
-                          '<button data-fancybox-next class="fancybox-button right_btn fancybox-button--right" title="Next"></button>' +
-                          '<div class="fancybox-slider-wrap"><ul class="fancybox-slider"></ul></div>' +
-                        '</div>' +
-                        '<div class="quick-view-aside"></div>' +
-                        '<button data-fancybox-close class="quick-view-close">X</button>' +
-                      '</div>' +
-                    '</div>';
-
-    var templateSmall = '<div class="fancybox-container" role="dialog">' +
-                          '<div class="quick-view-small-content">' +
-                            '<div class="quick-view-small-carousel">' +
-                              '<button data-fancybox-previous class="fancybox-button left_btn fancybox-button--left" title="Previous"></button>' +
-                              '<button data-fancybox-next class="fancybox-button right_btn fancybox-button--right" title="Next"></button>' +
-                              '<div class="fancybox-slider-wrap"><ul class="fancybox-slider"></ul></div>' +
-                              '<div class="quick-view-small-aside"></div>' +
-                            '</div>' +
-                            '<button data-fancybox-close class="quick-view-small-close">X</button>' +
-                          '</div>' +
-                        '</div>';
-
-    var width           = window.innerWidth;
-    var widthTarget     = 420;
-    var template        = width <= widthTarget ? templateSmall : templateBig;
-    var targetClass     = width <= widthTarget ? '.quick-view-small-aside' : '.quick-view-aside';
-    var baseClass       = width <= widthTarget ? 'quick-view-small-container' : 'quick-view-container';
-
-
-    // Fancybox config and open callbacks
-    $(".quick_view").fancybox({
-      baseClass	: baseClass,
-      infobar		: true,
-      buttons		: false,
-      thumbs		: false,
-      margin    : 0,
-      touch     : {vertical : false},
-      closeClickOutside : false,
-      baseTpl : template,
-        afterLoad : function(instance, r){
-          // Add product form
-          addForm(instance);
-        },
-        afterClose : function() {
-          // Needed to wait to add the css to body.
-          setTimeout(function(){
-            // This should be off for mobile... need to dynamically get the height
-            // of the promotional banner that needs this space.
-            $('body').css('padding-top', '44px')
-          })
+    },
+    "toggle": {
+      "styles": {
+        "toggle": {
+          "background-color": "#5cb8b2",
+          ":hover": {
+            "background-color": "#53a6a0"
+          },
+          ":focus": {
+            "background-color": "#53a6a0"
+          }
         }
-      });
+      }
+    },
+    "productSet": {
+      "styles": {
+        "products": {
+          "@media (min-width: 601px)": {
+            "margin-left": "-20px"
+          }
+        }
+      }
+    }
   };
 
-  // Execute on Document Ready
-  $(instaShop)
+  var configSet = {
+    'nipples': {  divId        : 'product-component-7d0544eab6d',
+                  componentId  : 4488305348
+    },
+    'diy'    : {  divId        : 'product-component-2a28c446ccf',
+                  componentId  : 4488688708
+    },
+    'sleeves': {  divId        : 'product-component-cc79cfd62db',
+                  componentId  : 4554100100
+    },
+    'bottles': {  divId        : 'product-component-0d78551ee26',
+                  componentId  : 1854786436
+    },
+    'giftset': {  divId        : 'product-component-a214ab1f17a',
+                  componentId  : 9362413060
+    },
+    'caps'  : {   divId        : 'product-component-2329ef42626',
+                  componentId  : 6309363908
+    },
+    'softNips': { divId        : 'product-component-b8d3858a0b5',
+                  componentId  : 6246253828
+    }
+  };
+
+  function ShopifyBuyInit(config) {
+    var client = ShopifyBuy.buildClient({
+      domain: 'mason-bottle.myshopify.com',
+      apiKey: 'aaaaaa',
+      appId: '6',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      var $node = document.getElementById(config.divId);
+      $($node).empty();
+      ui.createComponent('product', {
+        id: [config.componentId],
+        node: $node,
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: buyButtonOptions
+      });
+    });
+  };
+
+  $('[data-fancybox="product-card"]').fancybox({
+      // Disable zooming
+      animationEffect : "fade",
+
+  		// Change gallery item transition effect
+  		transitionEffect : 'slide',
+
+  		// Disable unnecessary modules
+  		thumbs     : false,
+  		fullScreen : false,
+  		slideShow  : false,
+
+  		// Disable idle
+  		idleTime : false,
+
+      // Disable vertical dragging
+  		touch : {
+         vertical : false
+  		},
+
+  		// Add custom class to container
+  		baseClass  : 'qv-container',
+
+      // Loop carrousell
+      loop : true,
+
+  		// Add form inside modal
+      beforeShow : function(instance, current, firstRun) {
+
+        // Remove any previously created form
+        $("#qv-form-clone").remove();
+
+        // Get current product id
+        var $element  = current.opts.$orig;
+        var qvID      = $element.data('qv-id');
+        var productId = $element.data('qv-product');
+
+        // Find product form
+        var $qvForm  = $( '#' + qvID + '-form' );
+
+        // Clone form and add inside modal
+        $qvForm.clone( true ).attr('id', 'qv-form-clone').appendTo( instance.$refs.inner ).show();
+
+        // Trigger Shopify Buy Button
+        ShopifyBuyInit(configSet[productId]);
+        if(window.innerWidth <= 590 ) {
+          twoColumnsInstaShop()
+        }
+  		},
+      beforeLoad: function(instance, current, firstRun){
+        $('.product-desc').hide();
+      },
+      mobile : {
+          clickContent : function( current, event ) {
+              return current.type === 'image' ? false : false;
+          },
+          clickOutside : function( current, event ) {
+              return current.type === 'image' ? 'close' : 'close';
+          },
+          dblclickContent : function( current, event ) {
+              return current.type === 'image' ? false : false;
+          }
+      },
+
+  });
+};
+
+// Execute on Document Ready
+$(instaShop)
 </script>
 
-<!-- Style -->
 <style media="screen">
+// InstaShop
+/*
+Step #1 - Styling the page and item grid
+========================================
+*/
+.fig-bin{
+  overflow: hidden;
+  margin-bottom: 27px !important;
+}
 
-  .product-desc{
-    margin: 30px auto;
-  }
+.fig-tile{
+  margin: 0px;
+  width: 100%;
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50%;
+  margin-bottom: 0px;
+  padding: 0;
+  padding-bottom: 100%;
+  margin: 0;
+  transition: transform 3.525s ease-out .01s,background-color .725s ease-in-out,opacity 3.525s ease-out;
+}
 
-  .fig-bin{
-    overflow: hidden;
-    margin-bottom: 27px !important;
-  }
+.fig-tile:hover{
+  transform: scaleX(1.15) scaleY(1.15) translateZ(0);
+}
 
-  .fig-tile{
-    margin: 0px;
-    width: 100%;
-    background-color: transparent;
-    background-size: cover;
-    background-position: 50%;
-    margin-bottom: 0px;
-    padding: 0;
-    padding-bottom: 100%;
-    margin: 0;
-    transition: transform 3.525s ease-out .01s,background-color .725s ease-in-out,opacity 3.525s ease-out;
-  }
+/*
+Step #2 - Styling the modal
+===========================
+*/
 
-  .fig-tile:hover{
-    transform: scaleX(1.15) scaleY(1.15) translateZ(0); */
-  }
+.qv-container .fancybox-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate3d(-50%, -50%, 0);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  max-width: 980px;
+  max-height: 650px;
+  z-index: 99994;
 
-  .hidden {
-    display: none;
-  }
-
-  .quick-view-container {
-    background: rgba(10,10,10,0.85);
-  }
-
-  .quick-view-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
-    max-width: 980px;
-    max-height: 650px;
-  }
-
-  .quick-view-carousel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 57%;
-    background: #fff;
-  }
-
-  .quick-view-carousel .fancybox-slider-wrap {
-    bottom: 30px;
-  }
-
-  .quick-view-aside {
-      position: absolute;
-      top: 30px;
-      right: 0;
-      bottom: 30px;
-      left: auto;
-      width: 43%;
-      padding: 50px 0 30px 0;
-      background: #fff;
-      color: #777;
-  }
-
-  .quick-view-aside::before, .quick-view-aside::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-  }
-
-  .quick-view-aside::before {
-      width: 8px;
-      background: #f4f4f4;
-  }
-
-  .quick-view-aside::after {
-      width: 1px;
-      background: #e9e9e9;
-  }
-
-  .quick-view-aside > div {
-    height: 100%;
-    overflow: auto;
-    padding: 0vh 30px 0 30px;
-    text-align: center;
-  }
-
-  .quick-view-aside > div > p {
-    font-size: 90%;
-  }
-
-  .quick-view-close {
-      position: absolute;
-      top: 30px;
-      right: 0;
-      width: 44px;
-      height: 44px;
-      background: #F0F0F0;
-      padding: 0;
-      margin: 0;
-      border: 0;
-      cursor: pointer;
-      font-family: Arial;
-      font-size: 14px;
-      color: #222;
-      text-indent: -99999px;
-    transition: all .2s;
-  }
-
-  .quick-view-close:hover {
-    background: #e4e4e4;
-  }
-
-  .quick-view-close::before,
-  .quick-view-close::after {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 22px;
-    width: 1px;
-    height: 18px;
-    background-color: #222;
-  }
-
-  .quick-view-close:before {
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-
-  .quick-view-close:after {
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-
-  .left_btn {
-    z-index: 100000;
-    background: transparent;
-    color: #121212;
-    font-size: 20px;
-    top: 50%;
-  }
-
-  .right_btn {
-    z-index: 100000;
-    background: transparent;
-    color: #121212;
-    font-size: 20px;
-    top: 50%;
-    left: 84%;
-  }
-
-  .fancybox-button:hover {
-    background: transparent;
-  }
-
-/*SMALL TEMPLATE*/
-  .quick-view-small-container {
-    background: rgba(10,10,10,0.85);
-    overflow-y: scroll;
-  }
-
-  .quick-view-small-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  @include at-query($max, $small) {
     width: 100%;
     height: 100%;
-    max-width: 980px;
-    max-height: 650px;
   }
+}
 
-  .quick-view-small-carousel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.qv-container .fancybox-image-wrap {
+  @include at-query($max, $small) {
+    transform: none !important;
+  }
+}
+
+.qv-container .fancybox-stage {
+  background: #fff;
+  left: 0;
+  right: 43%;
+
+  @include at-query($max, $small) {
+    right: 0%;
+  }
+}
+
+.qv-container form {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  bottom: 30px;
+  width: 43.1%;
+  background: #fff;
+  border-left: 8px solid #f4f4f4;
+
+  @include at-query($max, $small) {
+    z-index: 10000000;
+    margin-top: 230px;
     width: 100%;
-    background: #fff;
+    border-left: 0px solid #e9e9e9;
+  }
+}
+
+.qv-container .fancybox-toolbar {
+  top: 30px;
+  transform: translateZ(0);
+}
+
+.qv-container .fancybox-button {
+  background: #F0F0F0;
+  color: #222;
+  @include at-query($max, $small) {
+    top: -30px;
+  }
+}
+
+.qv-container .fancybox-button:hover:not([disabled]) {
+  background: #E3E3E3;
+  color: #000;
+}
+
+.fancybox-button--close::before,
+.fancybox-button--close::after {
+  height: 1px;
+  width: 18px;
+}
+
+.qv-container .fancybox-arrow--left {
+  left: -65px;
+}
+
+.qv-container .fancybox-arrow--right {
+  right: -65px;
+}
+
+
+/*
+Step #3 - Styling product form
+==============================
+*/
+
+.product-form {
+  display: none;
+  padding: 20px 40px;
+  color: #777;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.product-scroll-area {
+    margin-right: -40px;
+    margin-left: -40px;
+    padding: 0 40px;
+    height: calc(100% - 130px);
   }
 
-  .quick-view-small-carousel .fancybox-placeholder {
-      left: 15% !important;
-      top: -10% !important;
+.product-desc{
+  text-align: center;
+  margin-top: 15px;
+  display:none;
+
+  @include at-query($max, $small) {
+    font-size: 15px !important;
+    margin-top: 17px;
   }
 
-  .quick-view-small-carousel .fancybox-image {
-     width: 75% !important;
-     height: 75% !important;
-   }
-
-  .quick-view-small-carousel .fancybox-slider-wrap {
-    bottom: 30px;
+  p {
+    word-wrap: break-word;
   }
-
-  .quick-view-small-aside {
-      position: absolute;
-      overflow-y:auto;
-      top: 50%;
-      width: 100%;
-      padding: 50px 0 30px 0;
-      background: #fff;
-      color: #777;
-  }
-
-  .quick-view-small-aside .shopify-buy-frame{
-        max-width: 160px !important;
-  }
-
-  .quick-view-small-aside::before, .quick-view-small-aside::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-  }
-
-  .quick-view-small-aside::before {
-      width: 8px;
-      background: #f4f4f4;
-  }
-
-  .quick-view-small-aside::after {
-      width: 1px;
-      background: #e9e9e9;
-  }
-
-  .quick-view-small-aside > div {
-    height: 100%;
-    overflow: auto;
-    padding: 0vh 30px 0 30px;
-    text-align: center;
-  }
-
-  .quick-view-small-aside > div > p {
-    font-size: 90%;
-  }
-
-  .quick-view-small-close {
-      position: absolute;
-      right: 0;
-      width: 44px;
-      height: 44px;
-      background: #F0F0F0;
-      padding: 0;
-      margin: 0;
-      border: 0;
-      cursor: pointer;
-      font-family: Arial;
-      font-size: 14px;
-      color: #222;
-      text-indent: -99999px;
-      transition: all .2s;
-      z-index: 10000000;
-  }
-
-  .quick-view-small-close:hover {
-    background: #e4e4e4;
-  }
-
-  .quick-view-small-close::before,
-  .quick-view-small-close::after {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 22px;
-    width: 1px;
-    height: 18px;
-    background-color: #222;
-  }
-
-  .quick-view-small-close:before {
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-
-  .quick-view-small-close:after {
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
+}
 </style>
