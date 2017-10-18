@@ -1,3 +1,8 @@
+<!-- This implementation is a NOT DRY FIRST VERSION -->
+<!-- This implementat needs a major refactoring to make it configurable from 'customize theme' -->
+<!-- Its a good example if you want an example of how to use the shopify buy button on a grid plus carrousell -->
+
+<!-- Gets pictures to use in the Grid and carrousell assign to variables -->
 {% capture instaShop_img_1 %}1-instaShop-silicone-nipples.jpg{% endcapture %}
 {% capture instaShop_img_2 %}2-instaShop-sleeves.jpg{% endcapture %}
 {% capture instaShop_img_3 %}3-instaShop-giftset.jpg{% endcapture %}
@@ -5,24 +10,42 @@
 {% capture instaShop_img_5 %}5-instaShop-original-baby-bottle.jpg{% endcapture %}
 {% capture instaShop_img_6 %}6-instaShop-giftset.jpg{% endcapture %}
 {% capture instaShop_img_7 %}7-instaShop-infant-nipple.jpg{% endcapture %}
-{% capture instaShop_img_8 %}8-instaShop-diy.jpg{% endcapture %}
+{% capture instaShop_img_8 %}11-instaShop-tt.jpg{% endcapture %}
 {% capture instaShop_img_9 %}9-instaShop-sleeves.jpg{% endcapture %}
+
+<!-- Assigns urls to variables to be used by add to cart button -->
+{% assign diy_url     = "https://masonbottle.com/products/copy-of-mason-bottle-accessory-kit-silicone-sleeve-and-plastic-cap" %}
+{% assign nipples_url = "https://masonbottle.com/products/two-pack-of-mason-bottle-silicone-nipples" %}
+{% assign og_url      = "https://masonbottle.com/products/mason-bottle" %}
+{% assign sleeves_url = "https://masonbottle.com/products/mason-bottle-silicone-sleeve-1" %}
+{% assign cap_url     = "https://masonbottle.com/products/mason-bottle-plastic-cap-1" %}
+{% assign primi_url   = "https://masonbottle.com/products/mason-bottle-extra-soft-infant-nipple" %}
+{% assign tt_url      = "https://masonbottle.com/products/mason-bottle-toddler-tumbler" %}
+{% assign gitset_url  = "https://masonbottle.com/products/the-essential-mason-bottle-gift-set" %}
+
+
+
+
 
 <!-- Instagram Grid -->
 <br>
 <br>
 <br>
-<h1 align="center"> Shop Our Instagram </h1>
-<img src="https://cdn.shopify.com/s/files/1/1000/3488/files/line.png?15932132765427351784" width=100% height="20"/>
+
+<!-- Section Title -->
+<div class="section-header text-center">
+  <h1>{{ 'Shop Our Instagram ' }}</h1>
+  <hr class="hr--small">
+</div>
 
 <!-- div to break .wrapper class so grid can go full-width -->
 <!-- </div> -->
 
 <br>
 <br>
-<div class="grid blog-grid" align="center">
 
-    <!-- Here we need a loop :P  -->
+<!-- TODO: turn this section into a dinamically created and configurable HTML -->
+<div class="grid blog-grid" align="center">
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
@@ -35,6 +58,9 @@
         <div class="grid">
           <div class="buy-button" id='product-component-7d0544eab6d' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
+          </div>
+          <div align="center">
+            <a href="{{ nipples_url }}" class="btn buy-button__mb">ADD TO CART</a>
           </div>
           <div class="product-desc">
             <p>@faustisland just bought a pack of Mason Bottle Silicone Nipples, and then combined one with a classic blue mason jar she had at home. Extra adorable!</p>
@@ -55,6 +81,9 @@
           <div class="buy-button" id='product-component-cc79cfd62db' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
           </div>
+          <div align="center">
+            <a href="{{ sleeves_url }}" class="btn buy-button__mb">ADD TO CART</a>
+          </div>
           <div class="product-desc">
             <p>@valeryphalon.photography uses Mason Bottle Silicone Sleeves to make toddler training cups for her big girls.</p>
           </div>
@@ -73,6 +102,9 @@
         <div class="grid">
           <div class="buy-button" id='product-component-2a28c446ccf' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
+          </div>
+          <div align="center">
+            <a href="{{ diy_url }}" class="btn buy-button__mb">ADD TO CART</a>
           </div>
           <div class="product-desc">
             <p>@headygrimm gets a Mason Bottle + Silicone Sleeve ready for her little one. She got the whole bottle including the jar as part of the Essential Mason Bottle Gift Set, but you can also make your own with jars from home using the Mason Bottle DIY Kit.</p>
@@ -93,6 +125,9 @@
           <div class="buy-button" id='product-component-2a28c446ccf' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
           </div>
+          <div align="center">
+            <a href="{{ diy_url }}" class="btn buy-button__mb">ADD TO CART</a>
+          </div>
           <div class="product-desc">
             <p>@loveandcovenant uses the 8 oz DIY Kit in combination with their mason jars from home.</p>
           </div>
@@ -111,6 +146,9 @@
         <div class="grid">
           <div class="buy-button" id='product-component-0d78551ee26' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
+          </div>
+          <div align="center">
+            <a href="{{ og_url }}" class="btn buy-button__mb">ADD TO CART</a>
           </div>
           <div class="product-desc">
             <p>@eyecreate_ gave her little lade The Original Mason Bottle. The width of mason jars makes them easy to hold for little hands.</p>
@@ -131,6 +169,9 @@
           <div class="buy-button" id='product-component-a214ab1f17a' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
           </div>
+          <div align="center">
+            <a href="{{ gifset_url }}" class="btn buy-button__mb">PRE ORDER</a>
+          </div>
           <div class="product-desc">
             <p>@headygrimm got the Essential Mason Bottle Gift Set for her little one. It comes with both size bottles, both sleeves, and set of extra set of Medium Flow Nipples.</p>
           </div>
@@ -150,6 +191,9 @@
           <div class="buy-button" id='product-component-b8d3858a0b5' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
           </div>
+          <div align="center">
+            <a href="{{ primi_url }}" class="btn buy-button__mb">ADD TO CART</a>
+          </div>
           <div class="product-desc">
             <p>Paola used Mason Bottle with her son Max from the day they brought him home from the NICU. Though he didn't take to the preemie nipples in the hospital, he latched onto his Mason Bottle immediately!</p>
           </div>
@@ -159,18 +203,21 @@
 
     <div class="grid__item large--one-third medium--one-whole">
       <div class="fig-bin">
-        <a href="{{instaShop_img_8 | asset_url }}" data-qv-product="diy" class="" data-fancybox="product-card" data-qv-id="qv-8">
+        <a href="{{instaShop_img_8 | asset_url }}" data-qv-product="tt" class="" data-fancybox="product-card" data-qv-id="qv-8">
           <figure class="fig-tile" style="background-image: url('{{instaShop_img_8 | asset_url }}');"></figure>
         </a>
       </div>
 
       <form id="qv-8-form" class="product-form" action="">
         <div class="grid">
-          <div class="buy-button" id='product-component-2a28c446ccf' style="margin: 0 auto;">
+          <div class="buy-button" id='product-component-d8e6678d6ad' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
           </div>
+          <div align="center">
+            <a href="{{ tt_url }}" class="btn buy-button__mb">PRE ORDER</a>
+          </div>
           <div class="product-desc">
-            <p>@sriesland stocked up on mason jars for pumping at work, then she got a Mason Bottle DIY Kit to turn those jars into baby bottles.</p>
+            <p>Checkout the 4-in-1 design of the Toddler Tumbler.</p>
           </div>
         </div>
       </form>
@@ -187,6 +234,9 @@
         <div class="grid">
           <div class="buy-button" id='product-component-cc79cfd62db' style="margin: 0 auto;">
             <div class="fancybox-loading"></div>
+          </div>
+          <div align="center">
+            <a href="{{ sleeves_url }}" class="btn buy-button__mb">ADD TO CART</a>
           </div>
           <div class="product-desc">
             <p>@MasonBottle we like to use our 4 oz. sleeves with baby food portions.</p>
@@ -208,12 +258,13 @@
 // ----------------------------------------------------------------------------
 function instaShop() {
 
-  // Helpers
+  // Mobile layout configuration
   function twoColumnsInstaShop(){
     $('.buy-button').addClass("grid__item large--one-half medium--one-half small--one-half");
     $('.product-desc').addClass("grid__item large--one-half medium--one-half small--one-half");
   }
 
+  // Changes layout for mobile and desktop
   $( window ).resize(function() {
     if($(window).innerWidth() <= 590) {
       twoColumnsInstaShop()
@@ -223,7 +274,7 @@ function instaShop() {
     }
   });
 
-  // Advanced example - Product quick view
+
   var buyButtonOptions = {
     "product": {
       "variantId": "all",
@@ -247,6 +298,7 @@ function instaShop() {
           }
         },
         "button": {
+          "display": "none",
           "background-color": "#5cb8b2",
           ":hover": {
             "background-color": "#53a6a0"
@@ -262,7 +314,7 @@ function instaShop() {
     },
     "cart": {
       "contents": {
-        "button": true
+        "button": false
       },
       "styles": {
         "button": {
@@ -352,13 +404,16 @@ function instaShop() {
     },
     'softNips': { divId        : 'product-component-b8d3858a0b5',
                   componentId  : 6246253828
+    },
+    'tt'      : { divId        : 'product-component-d8e6678d6ad',
+                  componentId  : 11460169732
     }
   };
 
   function ShopifyBuyInit(config) {
     var client = ShopifyBuy.buildClient({
       domain: 'mason-bottle.myshopify.com',
-      apiKey: 'aaaaaa',
+      apiKey: 'YOURKEY',
       appId: '6',
     });
 
@@ -577,11 +632,11 @@ Step #3 - Styling product form
 }
 
 .product-scroll-area {
-    margin-right: -40px;
-    margin-left: -40px;
-    padding: 0 40px;
-    height: calc(100% - 130px);
-  }
+  margin-right: -40px;
+  margin-left: -40px;
+  padding: 0 40px;
+  height: calc(100% - 130px);
+}
 
 .product-desc{
   text-align: center;
@@ -596,5 +651,16 @@ Step #3 - Styling product form
   p {
     word-wrap: break-word;
   }
+}
+
+/*
+Buy button add to cart replaced by a custom one
+==============================================
+*/
+.buy-button__mb {
+  background-color: #5cb8b2;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
 }
 </style>
